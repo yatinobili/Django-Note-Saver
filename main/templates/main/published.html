@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+{% block content %}
+<body>
+
+    <div class="container">
+
+      <h2 class="subtitle">
+
+      </h2>
+    </div>
+    <div class="column">
+       <h1 class="title">
+        Published
+       </h1> 
+      </div>
+    <div class="container">
+    </div>
+</body>
+
+<div class="container">
+
+    {% for entry in entries %}
+        <article class="media">
+            <div class="media-content">
+                <div class="content">
+                    <p>
+                        <strong>{{ entry.name }} - {{ entry.date_posted }}</strong>
+                        <br> {{ entry.text }}
+                    </p>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+
+</div>
+{% endblock %}
+</html>

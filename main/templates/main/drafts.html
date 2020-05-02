@@ -1,0 +1,64 @@
+{% extends 'main/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+{% block content %}
+<body>
+
+    <div class="container">
+
+      <h2 class="subtitle">
+
+      </h2>
+    </div>
+    <div class="column">
+       <h1 class="title">
+        Drafts
+       </h1> 
+      </div>
+      <div class="container">
+        <form method="POST" action="{% url 'drafts' %}">
+        {% csrf_token %}
+        <div class="field">
+            <label class="label">Name</label>
+            <div class="control" >
+              {{ form.name }}
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              {{ form.text }}
+            </div>
+          </div>
+          
+          <div class="field">
+            <div class="control">
+            </div>
+          </div>
+          
+          <div class="field">
+            <div class="control">
+            </div>
+          </div>
+          
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-success">Submit</button>
+            </div>
+        </form>
+            <!--div class="control">
+              <button class="button is-success is-light">Cancel</button>
+            </div>
+          </div>
+      </div-->
+    <div class="container">
+    </div>
+</body>
+{% endblock %}
+</html>
